@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using Hifzi.Domain.Quran;
 using Newtonsoft.Json.Linq;
+#pragma warning disable CS8604
 
 namespace Hifzi;
 

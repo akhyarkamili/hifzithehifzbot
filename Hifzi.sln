@@ -1,10 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hifzi.Api", "Hifzi.Api\Hifzi.Api.csproj", "{79D95992-D21D-4469-8CAA-C9E5A2AF5EEE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hifzi.Domain", "Hifzi.Domain\Hifzi.Domain.csproj", "{C57870BA-C44C-42A4-87C4-C63995599CEC}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7BCC5BD2-C84C-49A2-8CF0-9C0D4A1AA2DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{185A178D-CE86-467D-A68B-DE374FCC8270}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{B3DA0D88-75DF-4B26-BF8D-315E7FCECA69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebApi\WebApi.csproj", "{1CB319E8-4476-45E8-893B-C1EA6A448882}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{14FAD94F-4A04-4D19-8D5A-D57A3775AF2F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,17 +19,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{79D95992-D21D-4469-8CAA-C9E5A2AF5EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79D95992-D21D-4469-8CAA-C9E5A2AF5EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79D95992-D21D-4469-8CAA-C9E5A2AF5EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79D95992-D21D-4469-8CAA-C9E5A2AF5EEE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C57870BA-C44C-42A4-87C4-C63995599CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C57870BA-C44C-42A4-87C4-C63995599CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C57870BA-C44C-42A4-87C4-C63995599CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C57870BA-C44C-42A4-87C4-C63995599CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185A178D-CE86-467D-A68B-DE374FCC8270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185A178D-CE86-467D-A68B-DE374FCC8270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185A178D-CE86-467D-A68B-DE374FCC8270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185A178D-CE86-467D-A68B-DE374FCC8270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3DA0D88-75DF-4B26-BF8D-315E7FCECA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DA0D88-75DF-4B26-BF8D-315E7FCECA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DA0D88-75DF-4B26-BF8D-315E7FCECA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DA0D88-75DF-4B26-BF8D-315E7FCECA69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CB319E8-4476-45E8-893B-C1EA6A448882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB319E8-4476-45E8-893B-C1EA6A448882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB319E8-4476-45E8-893B-C1EA6A448882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB319E8-4476-45E8-893B-C1EA6A448882}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{79D95992-D21D-4469-8CAA-C9E5A2AF5EEE} = {7BCC5BD2-C84C-49A2-8CF0-9C0D4A1AA2DB}
-		{C57870BA-C44C-42A4-87C4-C63995599CEC} = {7BCC5BD2-C84C-49A2-8CF0-9C0D4A1AA2DB}
+		{185A178D-CE86-467D-A68B-DE374FCC8270} = {7BCC5BD2-C84C-49A2-8CF0-9C0D4A1AA2DB}
+		{B3DA0D88-75DF-4B26-BF8D-315E7FCECA69} = {7BCC5BD2-C84C-49A2-8CF0-9C0D4A1AA2DB}
+		{1CB319E8-4476-45E8-893B-C1EA6A448882} = {7BCC5BD2-C84C-49A2-8CF0-9C0D4A1AA2DB}
 	EndGlobalSection
 EndGlobal
