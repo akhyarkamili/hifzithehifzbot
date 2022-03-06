@@ -1,8 +1,8 @@
-﻿using Hifzi.Domain.Common;
-using Hifzi.Domain.Mentees;
-using Hifzi.Domain.Reports.ValueObjects;
+﻿using Domain.Common;
+using Domain.Mentees;
+using Domain.Reports.ValueObjects;
 
-namespace Hifzi.Domain.Reports;
+namespace Domain.Reports;
 
 public class Report : Entity
 {

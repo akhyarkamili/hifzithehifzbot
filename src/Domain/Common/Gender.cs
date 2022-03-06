@@ -1,4 +1,4 @@
-namespace Hifzi.Domain.Common;
+namespace Domain.Common;
 
 public enum Gender
 {

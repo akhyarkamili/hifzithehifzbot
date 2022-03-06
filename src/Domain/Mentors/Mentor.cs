@@ -1,7 +1,7 @@
-﻿using Hifzi.Domain.Common;
-using Hifzi.Domain.Mentees;
+﻿using Domain.Common;
+using Domain.Mentees;
 
-namespace Hifzi.Domain.Mentors;
+namespace Domain.Mentors;
 
 public sealed class Mentor : Entity
 {
