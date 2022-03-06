@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations;
-using Hifzi.Domain.Common;
+using Domain.Common;
 
-namespace Hifzi.Domain.Reports.ValueObjects;
+namespace Domain.Reports.ValueObjects;
 
 public class QuranMarker : ValueObject
 {
-    [Range(1, 117)]
+    [Range(1, 114)]
     public int Surah { get; set; }
     public int Verse { get; set; }
     protected override IEnumerable<object> GetEqualityComponents()

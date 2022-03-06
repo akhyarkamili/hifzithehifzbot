@@ -1,4 +1,4 @@
-﻿namespace Hifzi.Domain.Quran;
+﻿namespace Domain.Quran;
 
 public class Surah
 {

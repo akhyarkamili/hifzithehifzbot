@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Hifzi.Domain.Common;
-using Hifzi.Domain.Mentors;
-using Hifzi.Domain.Reports;
+using Domain.Common;
+using Domain.Mentors;
+using Domain.Reports;
 
-namespace Hifzi.Domain.Mentees;
+namespace Domain.Mentees;
 
 [SuppressMessage("ReSharper", "UnassignedGetOnlyAutoProperty")]
 public class Mentee : Entity
