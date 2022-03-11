@@ -6,6 +6,7 @@ builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
 builder.Services.AddWebApi();
+builder.Services.AddApplication(builder.Configuration);
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");

@@ -1,12 +1,14 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Application;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddApplication(this IServiceCollection services)
+    public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
     {
-        var quranSingleton = new Quran();
+        var quranUrl = configuration.GetSection("QuranUrl").Value;
+        var quranSingleton = new Quran(quranUrl);
         services.AddSingleton(quranSingleton);
         
         return services;

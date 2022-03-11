@@ -19,6 +19,7 @@ public class Verse
     public readonly string ArabicText;
     public readonly string EnglishTranslation;
     public readonly int PageNumber;
+    public static string Test = "a\\\"h";
 
     public Verse(string arabicText, string englishTranslation, int pageNumber)
     {

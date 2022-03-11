@@ -1,5 +1,8 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Net.Http.Json;
+using Newtonsoft.Json.Linq;
 using Domain.Quran;
+using Newtonsoft.Json;
+
 #pragma warning disable CS8602
 #pragma warning disable CS8604
 
@@ -9,25 +12,15 @@ public class Quran
 {
     private static readonly string[] DONT_SKIP_FIRST_VERSE = new string[] {"at-Taubah", "al-Fatihah"};
 
-    public Quran()
+    public Quran(string requestUri)
     {
         Surahs = new List<Surah>();
+        HttpClient client = new HttpClient();
         
-        foreach (var surahRaw in RawQuran.SURAHS)
-        {
-            var jsonSurah = JObject.Parse(surahRaw);
-            var index = Int32.Parse(jsonSurah["index"].Value<string>());
-            var name = jsonSurah["name"].Value<string>();
-            var verses = new List<string>();
-            var versesRaw = DONT_SKIP_FIRST_VERSE.Contains(name) ? jsonSurah["verse"] : jsonSurah["verse"].Skip(1);
-            foreach (var verse in versesRaw)
-            {
-                // var verseString = verse.First().Value<string>();
-                // verses.Add(verseString);
-            }
+        var quranJsonRaw = client.GetStringAsync(requestUri).Result;
 
-            // Surahs.Add(new Surah(index, name, verses.ToArray()));
-        }
+        var quranJObject = JsonConvert.DeserializeObject<JArray>(quranJsonRaw);
+
     }
 
     public static List<Surah> Surahs;
