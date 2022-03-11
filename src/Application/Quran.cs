@@ -22,11 +22,11 @@ public class Quran
             var versesRaw = DONT_SKIP_FIRST_VERSE.Contains(name) ? jsonSurah["verse"] : jsonSurah["verse"].Skip(1);
             foreach (var verse in versesRaw)
             {
-                var verseString = verse.First().Value<string>();
-                verses.Add(verseString);
+                // var verseString = verse.First().Value<string>();
+                // verses.Add(verseString);
             }
 
-            Surahs.Add(new Surah(index, name, verses.ToArray()));
+            // Surahs.Add(new Surah(index, name, verses.ToArray()));
         }
     }
 
