@@ -10,17 +10,13 @@ namespace Application;
 
 public class Quran
 {
-    private static readonly string[] DONT_SKIP_FIRST_VERSE = new string[] {"at-Taubah", "al-Fatihah"};
-
-    public Quran(string requestUri)
+    public Quran(string requestUri, HttpClient client)
     {
         Surahs = new List<Surah>();
-        HttpClient client = new HttpClient();
         
         var quranJsonRaw = client.GetStringAsync(requestUri).Result;
 
         var quranJObject = JsonConvert.DeserializeObject<JArray>(quranJsonRaw);
-
     }
 
     public static List<Surah> Surahs;
