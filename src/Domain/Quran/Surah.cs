@@ -2,15 +2,17 @@
 
 public class Surah
 {
-    public Surah(int index, string name, Verse[] verses)
+    public Surah(int index, string englishName, Verse[] verses, string arabicName)
     {
         Index = index;
-        Name = name;
+        EnglishName = englishName;
         Verses = verses;
+        ArabicName = arabicName;
     }
 
     public readonly int Index;
-    public readonly string Name;
+    public readonly string EnglishName;
+    public readonly string ArabicName;
     public readonly Verse[] Verses;
 };
 
@@ -19,7 +21,6 @@ public class Verse
     public readonly string ArabicText;
     public readonly string EnglishTranslation;
     public readonly int PageNumber;
-    public static string Test = "a\\\"h";
 
     public Verse(string arabicText, string englishTranslation, int pageNumber)
     {

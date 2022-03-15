@@ -16,8 +16,33 @@ public class Quran
         
         var quranJsonRaw = client.GetStringAsync(requestUri).Result;
 
-        var quranJObject = JsonConvert.DeserializeObject<JArray>(quranJsonRaw);
-    }
+        var quranJArray = JsonConvert.DeserializeObject<JArray>(quranJsonRaw);
+        
+        for (int i=0;i<114; i++)
+        {
+            var ayahCount = quranJArray[i]["ayahCount"].Value<int>();
+            var verses = new Verse[ayahCount];
+            
+            for (int j = 0; j < ayahCount; j++)
+            {
 
+                var myArabicText = quranJArray[i]["ayahs"][j]["text"]["ar"].Value<string>();
+                var myEnglishTranslation = quranJArray[i]["ayahs"][j]["text"]["read"].Value<string>();
+                var myPageNumber = quranJArray[i]["ayahs"][j]["page"].Value<int>();
+
+                var currentVerse = new Verse(myArabicText, myEnglishTranslation, myPageNumber);
+
+                verses[j] = currentVerse;
+            }
+            
+            var myIndex = i + 1;
+            var myArabicName = quranJArray[i]["asma"]["ar"]["short"].Value<string>();
+            var myEnglishName = quranJArray[i]["asma"]["en"]["short"].Value<string>();
+
+            var currentSurah = new Surah(myIndex, myEnglishName, verses, myArabicName);
+
+            Surahs.Add(currentSurah);
+        }
+    }
     public static List<Surah> Surahs;
 }
