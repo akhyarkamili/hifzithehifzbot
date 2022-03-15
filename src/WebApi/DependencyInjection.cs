@@ -10,6 +10,10 @@ public static class  DependencyInjection
         HttpClient client = new HttpClient();
         var quranSingleton = new Quran(quranUrl, client);
         services.AddSingleton(quranSingleton);
+
+        services.AddSwaggerGen();
+        services.AddControllers();
+        
         return services;
     }
 }

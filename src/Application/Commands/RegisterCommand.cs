@@ -10,3 +10,11 @@ public class RegisterCommand : IRequest<Result>
     public string? Nickname { get; set; }
     public Gender Gender { get; set; }
 }
+
+public class RegisterCommandHandler : IRequestHandler<RegisterCommand, Result>
+{
+    public Task<Result> Handle(RegisterCommand request, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
+}
