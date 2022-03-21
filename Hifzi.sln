@@ -8,7 +8,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebApi\WebApi.csproj", "{1CB319E8-4476-45E8-893B-C1EA6A448882}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{82C61116-41F4-4354-958E-24F6271A95FC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adocker", "docker", "{82C61116-41F4-4354-958E-24F6271A95FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "quran", "quran", "{DA623D82-FFB3-4DC2-AC1C-92C4D83311FA}"
+	ProjectSection(SolutionItems) = preProject
+		quranm.json = quranm.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
