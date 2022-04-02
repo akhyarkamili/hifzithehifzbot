@@ -27,7 +27,7 @@ public class Quran
             {
 
                 var myArabicText = quranJArray[i]["ayahs"][j]["text"]["ar"].Value<string>();
-                var myEnglishTranslation = quranJArray[i]["ayahs"][j]["text"]["read"].Value<string>();
+                var myEnglishTranslation = quranJArray[i]["ayahs"][j]["translation"]["en"].Value<string>();
                 var myPageNumber = quranJArray[i]["ayahs"][j]["page"].Value<int>();
 
                 var currentVerse = new Verse(myArabicText, myEnglishTranslation, myPageNumber);
